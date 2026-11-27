@@ -1,29 +1,24 @@
 # Tasks
 
 ## Implemented
-
 - [x] Expo SDK 58, React Native and Expo Router foundation.
-- [x] Strict TypeScript and native app configuration.
+- [x] Strict TypeScript, ESLint flat config, Prettier and Jest setup.
 - [x] Supabase client with SecureStore persistence on native and browser storage on web.
 - [x] AppState-aware Supabase token refresh lifecycle.
 - [x] Email/password registration, sign-in, sign-out and protected route group.
 - [x] Email confirmation deep-link callback with PKCE code exchange.
-- [x] ESLint flat config and Jest unit-test foundation.
 - [x] EAS development, preview and production build profiles.
-- [x] Architecture, authentication, development, deployment, environment and security docs.
+- [x] Committed npm package-lock.json and clean npm ci installation.
+- [x] CI checks for formatting, lint, TypeScript, Jest, high/critical dependency audit, Expo SDK compatibility, Expo Doctor and Expo config.
+- [x] Architecture, authentication, development, deployment, environment and security documentation.
 
 ## Pending
-
-- [ ] Commit and enforce generated npm package-lock.json.
 - [ ] Add React Native Testing Library component tests.
-- [ ] Confirm Expo SDK 58 package compatibility, Expo Doctor and dependency audit in CI.
-- [ ] Configure EAS project ID, credentials and build secrets for the adopter.
+- [ ] Configure EAS project ID, bundle identifiers, credentials and build secrets for the adopter.
 - [ ] Test email confirmation and session persistence on physical iOS and Android devices.
-- [ ] Verify release builds with EAS.
+- [ ] Verify development, preview and production EAS builds.
 
 ## Validation
-
-- Initial typecheck and Expo config validation passed.
-- Lint passed after the Expo flat-config setup.
-- Jest setup is being validated after adding the Expo Babel preset.
-- A local Supabase project and valid public environment values are required for runtime authentication.
+- GitHub Actions passes all current CI checks, including Expo SDK compatibility and Expo Doctor.
+- The npm audit report currently identifies 22 moderate and zero high/critical advisories in the dependency graph. The CI gate blocks high and critical findings; review moderate advisories when updating the SDK/toolchain.
+- A valid Supabase project and public environment values are required for runtime authentication.
