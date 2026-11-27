@@ -11,3 +11,5 @@ coverage
 *.p12
 *.key
 *.mobileprovision
+
+audit.json
