@@ -23,7 +23,7 @@ A cross-platform iOS and Android application foundation using the current Expo S
 
 ## Create an application from this template
 
-Use GitHub's **Use this template** action to create a new repository, then clone it. Update `app.json` with the application name, slug, scheme, iOS bundle identifier and Android package before release.
+In repository Settings → General, enable **Template repository** if it is not already enabled. Then use **Use this template** to create a new repository and clone it. Update `app.json` with the application name, slug, scheme, iOS bundle identifier and Android package before release.
 
 ## Install and configure
 
