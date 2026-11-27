@@ -10,7 +10,8 @@
     "web": "expo start --web",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test": "jest --runInBand"
+    "test": "jest --runInBand",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.0",
@@ -38,9 +39,15 @@
     "typescript": "~5.9.2",
     "eslint": "^9.35.0",
     "eslint-config-expo": "~10.0.0",
-    "babel-preset-expo": "~54.0.0"
+    "babel-preset-expo": "~54.0.0",
+    "prettier": "^3.6.2"
   },
   "jest": {
     "preset": "jest-expo"
-  }
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  },
+  "packageManager": "npm@10.9.2"
 }
