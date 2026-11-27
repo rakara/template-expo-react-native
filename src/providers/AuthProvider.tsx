@@ -1,9 +1,20 @@
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+  type ReactNode,
+} from "react";
 import type { Session, User } from "@supabase/supabase-js";
 import { AppState } from "react-native";
 import { supabase } from "@/src/lib/supabase";
 
-type AuthValue = { session: Session | null; user: User | null; loading: boolean };
+type AuthValue = {
+  session: Session | null;
+  user: User | null;
+  loading: boolean;
+};
 const AuthContext = createContext<AuthValue | null>(null);
 
 export function AuthProvider({ children }: { children: ReactNode }) {

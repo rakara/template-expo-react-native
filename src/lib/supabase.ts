@@ -3,9 +3,10 @@ import { createClient, type SupportedStorage } from "@supabase/supabase-js";
 import * as SecureStore from "expo-secure-store";
 import { Platform } from "react-native";
 import { env } from "@/src/lib/env";
- 
+
 const webStorage: SupportedStorage = {
-  getItem: async (key) => (typeof window === "undefined" ? null : window.localStorage.getItem(key)),
+  getItem: async (key) =>
+    typeof window === "undefined" ? null : window.localStorage.getItem(key),
   setItem: async (key, value) => {
     if (typeof window !== "undefined") window.localStorage.setItem(key, value);
   },

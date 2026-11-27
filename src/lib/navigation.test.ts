@@ -2,7 +2,9 @@ import { getSafeInternalPath } from "./navigation";
 
 describe("getSafeInternalPath", () => {
   it("accepts an internal route", () => {
-    expect(getSafeInternalPath("/(app)?tab=activity")).toBe("/(app)?tab=activity");
+    expect(getSafeInternalPath("/(app)?tab=activity")).toBe(
+      "/(app)?tab=activity",
+    );
   });
 
   it("rejects external and protocol-relative URLs", () => {

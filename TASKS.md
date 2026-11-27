@@ -1,6 +1,7 @@
 # Tasks
 
 ## Implemented
+
 - [x] Expo SDK 58, React Native and Expo Router foundation.
 - [x] Strict TypeScript and native app configuration.
 - [x] Supabase client with SecureStore persistence on native and browser storage on web.
@@ -12,6 +13,7 @@
 - [x] Architecture, authentication, development, deployment, environment and security docs.
 
 ## Pending
+
 - [ ] Commit and enforce generated npm package-lock.json.
 - [ ] Add React Native Testing Library component tests.
 - [ ] Confirm Expo SDK 58 package compatibility, Expo Doctor and dependency audit in CI.
@@ -20,6 +22,7 @@
 - [ ] Verify release builds with EAS.
 
 ## Validation
+
 - Initial typecheck and Expo config validation passed.
 - Lint passed after the Expo flat-config setup.
 - Jest setup is being validated after adding the Expo Babel preset.

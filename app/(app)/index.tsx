@@ -2,5 +2,49 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import { router } from "expo-router";
 import { supabase } from "@/src/lib/supabase";
 import { useAuth } from "@/src/providers/AuthProvider";
-export default function DashboardScreen(){const {user}=useAuth();async function signOut(){await supabase.auth.signOut();router.replace("/sign-in");}return <View style={styles.screen}><Text style={styles.eyebrow}>WORKSPACE</Text><Text style={styles.title}>Dashboard</Text><View style={styles.card}><Text style={styles.heading}>Authenticated session</Text><Text style={styles.muted}>Signed in as {user?.email}</Text><Text style={styles.muted}>Use database RLS for data authorization.</Text></View><Pressable style={styles.button} onPress={signOut}><Text style={styles.buttonText}>Sign out</Text></Pressable></View>;}
-const styles=StyleSheet.create({screen:{flex:1,backgroundColor:"#f7f8fa",padding:24,paddingTop:72},eyebrow:{color:"#1d4ed8",fontWeight:"700",letterSpacing:2},title:{fontSize:34,fontWeight:"800",color:"#172033",marginTop:8,marginBottom:24},card:{backgroundColor:"white",borderRadius:14,padding:20,gap:10},heading:{fontSize:18,fontWeight:"700"},muted:{color:"#64748b",lineHeight:22},button:{marginTop:24,borderWidth:1,borderColor:"#cbd5e1",padding:14,borderRadius:9,alignItems:"center"},buttonText:{fontWeight:"700"}});
+export default function DashboardScreen() {
+  const { user } = useAuth();
+  async function signOut() {
+    await supabase.auth.signOut();
+    router.replace("/sign-in");
+  }
+  return (
+    <View style={styles.screen}>
+      <Text style={styles.eyebrow}>WORKSPACE</Text>
+      <Text style={styles.title}>Dashboard</Text>
+      <View style={styles.card}>
+        <Text style={styles.heading}>Authenticated session</Text>
+        <Text style={styles.muted}>Signed in as {user?.email}</Text>
+        <Text style={styles.muted}>
+          Use database RLS for data authorization.
+        </Text>
+      </View>
+      <Pressable style={styles.button} onPress={signOut}>
+        <Text style={styles.buttonText}>Sign out</Text>
+      </Pressable>
+    </View>
+  );
+}
+const styles = StyleSheet.create({
+  screen: { flex: 1, backgroundColor: "#f7f8fa", padding: 24, paddingTop: 72 },
+  eyebrow: { color: "#1d4ed8", fontWeight: "700", letterSpacing: 2 },
+  title: {
+    fontSize: 34,
+    fontWeight: "800",
+    color: "#172033",
+    marginTop: 8,
+    marginBottom: 24,
+  },
+  card: { backgroundColor: "white", borderRadius: 14, padding: 20, gap: 10 },
+  heading: { fontSize: 18, fontWeight: "700" },
+  muted: { color: "#64748b", lineHeight: 22 },
+  button: {
+    marginTop: 24,
+    borderWidth: 1,
+    borderColor: "#cbd5e1",
+    padding: 14,
+    borderRadius: 9,
+    alignItems: "center",
+  },
+  buttonText: { fontWeight: "700" },
+});
