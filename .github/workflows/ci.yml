@@ -21,5 +21,7 @@ jobs:
       - run: npm run lint
       - run: npm run typecheck
       - run: npm test
+      - run: npm audit --audit-level=high
       - run: npx expo install --check
+      - run: npx expo-doctor
       - run: npx expo config --type public
